@@ -1,9 +1,7 @@
 from telegram import Update,ReplyKeyboardMarkup,KeyboardButton,InlineKeyboardButton,InlineKeyboardMarkup
 from telegram.ext import Updater,CommandHandler,CallbackContext,MessageHandler,Filters,CallbackQueryHandler
 import os
-TOKEN=os.environ.get("TOKEN")
 
-updater = Updater(token=TOKEN)
 def start(update: Update, context: CallbackContext) -> None:
     bot = context.bot
     chat_id = update.message.chat.id
